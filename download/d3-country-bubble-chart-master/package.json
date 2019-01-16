@@ -1,0 +1,18 @@
+{
+  "name": "d3-country-bubble-chart-master",
+  "version": "1.0.0",
+  "description": "This project demonstrates various ways in which [D3](https://d3js.org/)'s [forces simulation](https://github.com/d3/d3-force) can lay out elements. Each element is a circle that represents a country. The area of each circle is proportional to the [UN's 2015 population estimate](https://esa.un.org/unpd/wpp/Download/Standard/Population/) of the country. Each circle is filled with a color or the flag of the country.",
+  "main": "Server.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}
