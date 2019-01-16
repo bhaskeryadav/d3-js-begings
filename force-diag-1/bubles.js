@@ -55,37 +55,21 @@
   */
   var simulation = d3
     .forceSimulation()
-    .force("x", forceX)
+    .force("x", d3.forceX(width / 2).strength(0.05))
     .force("y", forceY)
     .force("collide", forceCollide);
 
   d3.select("#decade").on("click", () => {
     simulation
       .force("x", forceX)
-      .force("y", forceY)
-      .force(
-        "collide",
-        d3.forceCollide(function(d) {
-          //console.log(d);
-          return radiusScale(d.sales) + 1;
-        })
-      )
       .alphaTarget(0.5)
       .restart();
   });
 
   d3.select("#combine").on("click", () => {
     simulation
-      .force("x", d3.forceX(width / 2).strength(0.04))
-      .force("y", d3.forceY(height / 2).strength(0.04))
-      .force(
-        "collide",
-        d3.forceCollide(function(d) {
-          //console.log(d);
-          return radiusScale(d.sales) + 1;
-        })
-      )
-      .alphaTarget(0.2)
+      .force("x", d3.forceX(width / 2).strength(0.05))
+      .alphaTarget(0.5)
       .restart();
   });
 
